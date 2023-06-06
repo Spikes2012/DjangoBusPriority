@@ -22,10 +22,3 @@ function plotPoints(latitudes, longitudes, siteno, site_names) {
     map.addLayer(markers);
 }
 
-
-
-// function submitForm() {
-//     document.getElementById('keyword-form').submit();
-// }
-
-
