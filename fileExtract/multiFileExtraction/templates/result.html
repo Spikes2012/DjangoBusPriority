@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/results.css' %}">
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
+    {% if result %}
+        {% for file_name, data in result.items %}
+            <div class="file-container">
+                <div class="file-name">{{ file_name }}</div>
+                {% if data.detectedTextList %}
+                    <div class="detected-list">
+                        <h4>Detected Text List:</h4>
+                        <ul>
+                            {% for detected_text in data.detectedTextList %}
+                                U+2191<li>{{ detected_text }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+                {% if data.detectedImgList %}
+                    <div class="detected-list">
+                        <h4>Detected Image List:</h4>
+                        <ul>
+                            {% for detected_img in data.detectedImgList %}
+                                <li>{{ detected_img }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    {% else %}
+        <p class="empty-result">No data is present.</p>
+    {% endif %}
+</body>
+</html>

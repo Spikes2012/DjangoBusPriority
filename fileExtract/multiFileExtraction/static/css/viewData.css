@@ -1,0 +1,63 @@
+#map {
+    height: 700px;
+    width: 1000px;
+}
+
+.message-container {
+    text-align: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: slideInUp 0.5s ease-in-out;
+}
+
+@keyframes slideInUp {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+#message {
+    font-size: 18px;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+}
+
+.dropdown-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dropdown-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+
+.dropdown-container select {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#dropdown {
+    font-size: 16px;
+    padding: 5px 10px;
+}

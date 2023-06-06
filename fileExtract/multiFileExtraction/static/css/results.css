@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.file-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+h4 {
+    margin-top: 0;
+}
+
+.file-name {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    padding: 5px 0;
+}
+
+.empty-result {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+}
