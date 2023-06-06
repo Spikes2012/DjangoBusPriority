@@ -13,7 +13,7 @@ This is a web application developed using Django that allows users to upload fil
 # Getting Started
 To get started with the Site Mapping Application, follow these steps:
 
-1. Clone the repository: git clone https://github.com/Spikes2012/site-mapping-app.git
+1. Clone the repository: git clone https://github.com/Spikes2012/DjangoBusPriority.git
 2. Install the required dependencies: **pip install -r requirements.txt**
 3. Navigate to the fileExtract project directory: ** cd .\fileExtract\ **
 4. Set up the database: Run database migrations using Django's management command: **python manage.py migrate**
