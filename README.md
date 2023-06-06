@@ -15,9 +15,10 @@ To get started with the Site Mapping Application, follow these steps:
 
 1. Clone the repository: git clone https://github.com/spikes2012/site-mapping-app.git
 2. Install the required dependencies: **pip install -r requirements.txt**
-3. Set up the database: Run database migrations using Django's management command: **python manage.py migrate**
-4. Start the development server: **python manage.py runserver**
-5. Access the application in your web browser: http://localhost:8000
+3. Navigate to the fileExtract project directory: **cd .\fileExtract\**
+4. Set up the database: Run database migrations using Django's management command: **python manage.py migrate**
+5. Start the development server: **python manage.py runserver**
+6. Access the application in your web browser: http://localhost:8000
 
 
 
