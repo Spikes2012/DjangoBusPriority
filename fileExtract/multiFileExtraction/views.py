@@ -112,7 +112,6 @@ def view_data(request):
 
     csv_filename = ""
 
-    print("HAIL HITMAN")
     if request.method == 'POST':
 
         # Handle form submission
