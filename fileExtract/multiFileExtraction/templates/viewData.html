@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Site Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/viewData.css' %}?v=1.0 ">
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+
+    <div class="message-container">
+        <p id="message">This displays all the sites with <b> Bus Priority as of 29/05/2023 </b></p>
+    </div>
+
+    <div class="container">
+        <div class="column">
+            <form id="filter-form" method="post" action="/viewData">
+                {% csrf_token %}
+                <div class="dropdown-container">
+                    <label for="dropdown">Select Mode of Transportation:</label>
+                    <select id="dropdown" name="dropdown">
+                        <option value="">Select a Value</option>
+                        <option value="bus">Bus</option>
+                        <option value="tram">Tram</option>
+                        <option value="bicycle">Bicycle</option>
+                    </select>
+                </div>
+                
+                <input type="submit" value="Apply Filter">
+            </form>
+        </div>
+        <div class="column">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.1/leaflet.markercluster.js"></script>
+    <script src="{% static 'js/viewData.js' %}"></script>
+    <script>
+        
+
+        // document.getElementById("filter-form").addEventListener("submit", function(event) {
+        //     event.preventDefault(); // Prevent default form submission            
+        // });
+
+        function Textdata() {
+            console.log("fuck u")
+        }
+
+
+        var latitude = {{ latitude }};
+        var longitude = {{ longitude }};
+        var siteno = {{ siteno }}
+        var site_names = JSON.parse('{{ site_names|safe }}');
+
+
+        // var site_name = "{{ site_names|safe|escapejs }}"
+        // var updated_site_names = escape(site_name).replace(/'/g, "\\'");
+
+        // console.log(updated_site_names)
+        plotPoints(latitude , longitude, siteno, site_names);
+    </script>
+</body>
+</html>

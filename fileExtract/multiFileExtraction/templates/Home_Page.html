@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Home_Page.css' %}?v=1.0">
+</head>
+<body>
+    <div class="main-container">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="{% url 'home' %}">Home_Page</a></li>
+                <li><a href="{% url 'upload' %}">Upload file</a></li>
+                <li><a href="{% url 'view_data' %}">View Map</a></li>
+            </ul>
+        </nav>
+        <header>
+            <div class="header-content"></div>
+            <img src="{% static 'images/Infrastructure Victoria.png' %}" alt="Infrastructure Victoria,">
+        </div>
+    </header>
+    </div>
+</body>
+</html>
