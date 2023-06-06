@@ -9,7 +9,7 @@ import pandas as pd
 from multiFileExtraction.helperFunctions import check_pdf, text_extract_check, text_pdf_extraction, pdf_image_extraction, read_text_from_image
 
 # INITIALIZING TESSERACT.EXE FOR PERFORMING OCR
-path_to_tesseract = r"C:\Users\Naveen\AppData\Local\Programs\Tesseract-OCR\tesseract.exe"
+path_to_tesseract = r"C:\Users\\AppData\Local\Programs\Tesseract-OCR\tesseract.exe"
 pytesseract.pytesseract.tesseract_cmd = path_to_tesseract
 
 
@@ -134,10 +134,9 @@ def view_data(request):
     
     if csv_filename == "":
         bus_df = pd.read_csv(os.getcwd()+os.sep+"multiFileExtraction"+os.sep+"bus_priority_all_data.csv")
-        print(123123123)
     else:
         bus_df = pd.read_csv(os.getcwd()+os.sep+"multiFileExtraction"+os.sep+csv_filename)
-        print("rishab is a beast")
+
 
     filtered_df = bus_df['SITE NO'].unique().tolist()
     print(len(filtered_df))
